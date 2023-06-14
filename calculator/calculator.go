@@ -1,6 +1,7 @@
 package calculator
 
 import (
+	"errors"
 	"fmt"
 )
 
@@ -9,6 +10,8 @@ func Calc() {
 	var op string
 	var num1 int
 	var num2 int
+	zd_err:=errors.New("Divisor Can't be Zero (ZERO DIVISION ERROR)")
+
 	fmt.Println("Enter First Number ")
 	fmt.Scanln(&num1)
 	fmt.Println("Enter Second Number ")
@@ -25,7 +28,7 @@ func Calc() {
 		fmt.Println(num1 % num2)
 	case "/":
 		if num2 == 0 {
-			fmt.Println("Divisor cant be 0 ")
+			fmt.Println(zd_err)
 		} else {
 			fmt.Println(num1 / num2)
 		}
