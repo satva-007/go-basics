@@ -10,6 +10,7 @@ func Calc() {
 	var op string
 	var num1 int
 	var num2 int
+	//handles error
 	zd_err:=errors.New("Divisor Can't be Zero (ZERO DIVISION ERROR)")
 
 	fmt.Println("Enter First Number ")
